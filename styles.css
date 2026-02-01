@@ -62,7 +62,7 @@ body.menu-open {
   background:#fdfdfe;
 
   border-bottom: 1px solid var(--border);
-  z-index: 50;
+  z-index: 30;
   box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   margin-bottom: 10px;
   
@@ -112,6 +112,9 @@ border-radius: 7px;
 box-shadow: rgba(0, 0, 0, 0.049) 7px 7px 7px 7px ;
 
 }
+
+
+
 #nav a {
   margin-right: 24px;
   text-decoration: none;
