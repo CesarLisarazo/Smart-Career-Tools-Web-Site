@@ -303,7 +303,10 @@ form input{
   margin: 50px auto;
   box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
 }
-
+#email:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 2px rgba(37, 100, 235, 0.145);
+}
 /* ==============================================================================================================
    RESPONSIVE
    ============================================================================================================== */
@@ -311,6 +314,7 @@ form input{
 @media (max-width: 768px) {
   #main-tittle{
     font-size: 23px;
+    letter-spacing: -0.08em;
   }
   #nav {
     display: none;
