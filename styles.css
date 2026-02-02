@@ -345,7 +345,7 @@ form input{
       "form"
       "hero"
       "image";
-         gap: 16px;
+         gap: 0;
   }
 
   #image-container img {
