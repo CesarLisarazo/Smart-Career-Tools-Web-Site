@@ -211,7 +211,7 @@ body.menu-open {
   padding: 24px 24px;
   text-align: center;
 
-  background-color: #fdfdfe8c;
+  background-color: #fdfdfe;
 
   gap: 32px;
   border-radius: 8px;
@@ -224,7 +224,7 @@ body.menu-open {
   max-width: var(--max-width);
   margin: calc(var(--header-height) - 110px) auto 64px auto;
   padding: 24px 24px;
-  background-color: #fdfdfe90;
+  background-color: #fdfdfe;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
