@@ -309,7 +309,7 @@ box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
 
 
   #main-tittle{
- max-width: var(--max-width);
+ max-width:auto;
   margin: calc(var(--header-height) + 8px) auto 64px auto;
 
 
