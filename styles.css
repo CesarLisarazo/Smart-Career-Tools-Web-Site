@@ -245,7 +245,7 @@ body.menu-open {
   /* centra horizontalmente el form */
   justify-content:space-between;
   padding: 10px 60px;
-  background-color: #f5f8fa;
+  background-color: #f5f8faa0;
   box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   border-radius: 8px;
 }
@@ -261,7 +261,7 @@ body.menu-open {
   justify-content: center;
   /* centra verticalmente */
   padding: 10px 30px;
-    background-color: #f5f8fa;
+    background-color: #f5f8faa0;
   box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   border-radius: 8px;
 }
@@ -310,7 +310,7 @@ form input{
 
 #image-container {
   grid-area: image;
- background-color:  #f5f8fa;
+ background-color:  #f5f8faa0;
   box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   border-radius: 8px;
 }
