@@ -211,7 +211,7 @@ body.menu-open {
   padding: 24px 24px;
   text-align: center;
 
-  background-color: #fdfdfe;
+  background-color: #fdfdfe8c;
 
   gap: 32px;
   border-radius: 8px;
@@ -224,7 +224,7 @@ body.menu-open {
   max-width: var(--max-width);
   margin: calc(var(--header-height) - 110px) auto 64px auto;
   padding: 24px 24px;
-  background-color: #fdfdfe;
+  background-color: #fdfdfe90;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -245,8 +245,8 @@ body.menu-open {
   /* centra horizontalmente el form */
   justify-content:space-between;
   padding: 10px 60px;
-  background-color: #f1f5f9;
-
+  background-color: #f5f8fa;
+  box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   border-radius: 8px;
 }
 
@@ -261,8 +261,8 @@ body.menu-open {
   justify-content: center;
   /* centra verticalmente */
   padding: 10px 30px;
-    background-color: #f1f5f9;
-
+    background-color: #f5f8fa;
+  box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   border-radius: 8px;
 }
 
@@ -310,8 +310,8 @@ form input{
 
 #image-container {
   grid-area: image;
- background-color: #f1f5f9;
-
+ background-color:  #f5f8fa;
+  box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   border-radius: 8px;
 }
 
