@@ -244,7 +244,7 @@ body.menu-open {
    flex-direction: column;
   /* centra horizontalmente el form */
   justify-content:space-between;
-  padding: 10px 60px;
+  padding: 30px 60px;
   background-color: #f5f8faa0;
   box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   border-radius: 8px;
@@ -260,7 +260,7 @@ body.menu-open {
   /* centra horizontalmente el form */
   justify-content: center;
   /* centra verticalmente */
-  padding: 10px 30px;
+  padding: 30px;
     background-color: #f5f8faa0;
   box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
   border-radius: 8px;
@@ -372,5 +372,7 @@ form input{
 
 
   }
-
+#form{
+    padding: 30px 30px;
+}
 }
