@@ -256,6 +256,7 @@ body.menu-open {
   /* centra horizontalmente el form */
   justify-content: center;
   /* centra verticalmente */
+  padding: 10px 30px;
 }
 
 #form form {
@@ -268,6 +269,23 @@ body.menu-open {
   text-align: center;
 }
 
+
+form button{
+  background-color: #3071ed;
+  padding: 15px 0;
+    border-radius: 10px;
+    color: #fdfdfe;
+    font-size: larger;
+    font-weight: bold;
+
+
+}
+
+form input{
+
+  padding: 15px 10px;
+  border-radius: 10px;
+}
 
 #image-container {
   grid-area: image;
