@@ -31,3 +31,16 @@ overlay.addEventListener("click", closeMenu);
 
 // Click dentro del menú → cierra (UX esperada)
 mobileMenu.addEventListener("click", closeMenu);
+
+const descargasLink = document.getElementById("nav-pricing");
+const emailInput = document.getElementById("email");
+
+if (descargasLink && emailInput) {
+  descargasLink.addEventListener("click", () => {
+    // dejamos que el href="#form" haga su trabajo
+
+    setTimeout(() => {
+      emailInput.focus();
+    }, 300);
+  });
+}

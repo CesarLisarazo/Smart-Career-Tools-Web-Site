@@ -240,15 +240,15 @@ body.menu-open {
 #hero {
   grid-area: hero;
   text-align: center;
+   display: flex;
+   flex-direction: column;
+  /* centra horizontalmente el form */
+  justify-content:space-between;
+  padding: 10px 60px;
+
 }
 
-.icon {
-  font-size: 25PX;
-  color: #42afad;
 
-
-  -webkit-text-stroke: 2px #08345d;
-}
 
 #form {
 
@@ -279,7 +279,21 @@ form button{
     color: #fdfdfe;
     font-size: larger;
     font-weight: bold;
+   box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
+ border: 2px solid black;
+}
 
+#hero-button{
+  text-decoration: none;
+  position: relative;
+  background-color: #3071ed;
+  padding: 10px 0;
+    border-radius: 10px;
+    color: #fdfdfe;
+    font-size: larger;
+    font-weight: bold;
+      border: 2px solid black;
+       box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
 
 }
 
@@ -331,6 +345,7 @@ form input{
       "form"
       "hero"
       "image";
+         gap: 16px;
   }
 
   #image-container img {
@@ -350,4 +365,5 @@ form input{
 
 
   }
+
 }
