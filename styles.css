@@ -239,7 +239,13 @@ background-color: #fdfdfe;
   grid-area: hero;
    text-align: center;
 }
+.icon{
+  font-size: larger;
+  color: #42afad;
+ background-color: #08345d;
+ border-radius: 3px;
 
+}
 #form {
   
   grid-area: form;
