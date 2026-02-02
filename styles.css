@@ -242,9 +242,9 @@ background-color: #fdfdfe;
 .icon{
   font-size: larger;
   color: #42afad;
- background-color: #08345d;
- border-radius: 3px;
 
+
+  -webkit-text-stroke: 2px #08345d;
 }
 #form {
   
