@@ -213,7 +213,7 @@ background-color: #fdfdfe;
 
   gap: 32px;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.085)
+ box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
 
 
 }
@@ -231,7 +231,7 @@ background-color: #fdfdfe;
 
   gap: 32px;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.085)
+box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
 }
 
 /* Áreas */
@@ -267,6 +267,7 @@ background-color: #fdfdfe;
 
 #image-container {
   grid-area: image;
+  
 }
 #image-container img {
   width: 100%;
@@ -275,7 +276,7 @@ background-color: #fdfdfe;
   object-fit: contain;
   display: block;
   margin: 50px auto;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+ box-shadow: rgba(0, 0, 0, 0.085) 7px 7px 7px 0px;
 }
 /* =====================================================
    RESPONSIVE
