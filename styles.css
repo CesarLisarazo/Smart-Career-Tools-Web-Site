@@ -99,6 +99,8 @@ body.menu-open {
 
 #tittle {
   display: flex;
+  font-size: medium;
+  font-weight: normal;
 
 
 }
@@ -198,7 +200,77 @@ body.menu-open {
 }
 
 
+/* =====================================================
+   MAIN CONTAINER LAYOUT
+   ===================================================== */
+#main-tittle{
+ max-width: var(--max-width);
+  margin: calc(var(--header-height) + 22px) auto 64px auto;
+  padding: 24px  24px;
+text-align: center;
+  
+background-color: #fdfdfe;
 
+  gap: 32px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.085)
+
+
+}
+
+#main-container {
+  max-width: var(--max-width);
+  margin: calc(var(--header-height) - 110px) auto 64px auto;
+  padding: 24px  24px;
+background-color: #fdfdfe;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "hero form "
+    "image image";
+
+  gap: 32px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.085)
+}
+
+/* Áreas */
+#hero {
+  grid-area: hero;
+   text-align: center;
+}
+
+#form {
+  
+  grid-area: form;
+  display: flex;
+  align-items: center;      /* centra horizontalmente el form */
+  justify-content: center;  /* centra verticalmente */
+}
+
+#form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+   text-align: center;
+}
+
+
+#image-container {
+  grid-area: image;
+}
+#image-container img {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  display: block;
+  margin: 50px auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
 /* =====================================================
    RESPONSIVE
    ===================================================== */
@@ -211,4 +283,32 @@ body.menu-open {
   #hamburger-button {
     display: block;
   }
+
+      #main-container {
+          margin: calc(var(--header-height) - 118px) auto 64px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "form"
+      "hero"
+      "image";
+  }
+  #image-container img {
+    max-height: 320px;
+  }
+  #hero{
+    display: none;
+  }
+
+
+
+  #main-tittle{
+ max-width: var(--max-width);
+  margin: calc(var(--header-height) + 8px) auto 64px auto;
+
+
+
 }
+}
+
+
+
