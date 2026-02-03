@@ -336,7 +336,14 @@ form input{
 }
 #email:focus {
   outline: none;
-  box-shadow: 2px 2px 0 2px rgba(37, 100, 235, 0.145);
+
+
+  
+}
+
+#email:focus::placeholder {
+
+  font-weight: bold;
 }
 /* ==============================================================================================================
    RESPONSIVE
