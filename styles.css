@@ -89,7 +89,11 @@ body.menu-open {
   gap: 10px;
 
 }
-
+#main-logo a{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
 #logo {
 
   display: flex;
