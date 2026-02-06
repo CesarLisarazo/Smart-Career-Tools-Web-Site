@@ -351,7 +351,7 @@ form input{
     display: none;
   }
 #tittle{
-  font-weight: bold;
+  font-weight:500;
 }
   #hamburger-button {
     display: block;
