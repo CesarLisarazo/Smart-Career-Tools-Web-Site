@@ -350,7 +350,9 @@ form input{
   #nav {
     display: none;
   }
-
+#tittle{
+  font-weight: bold;
+}
   #hamburger-button {
     display: block;
   }
