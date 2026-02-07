@@ -48,13 +48,22 @@ body.menu-open {
 
 #header {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  border-radius: 14px 14px 0 0;
+ 
   height: 64px;
-  background: #fdfdfe;
-  border-bottom: 1px solid var(--border);
+   background: linear-gradient(
+    to top right,
+   #b5b7cf,
+    #f9f9fd
+  );
+
   z-index: 30;
   box-shadow: rgba(0, 0, 0, 0.08) 0 4px 8px;
+
+
 }
 
 #nav-container {
@@ -117,7 +126,11 @@ body.menu-open {
   left: 12px;
   right: 12px;
 
-  background: white;
+  background: linear-gradient(
+    to top right,
+   #b5b7cf,
+    #f9f9fd
+  );
   padding: 8px 0;
   border-radius: 18px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
@@ -146,7 +159,7 @@ body.menu-open {
   color: var(--text);
   font-weight: 500;
   border-radius: 12px;
-  background: #f8fafc;
+  background: #f8fafc6b;
 }
 
 /* =====================================================
@@ -174,13 +187,17 @@ body.menu-open {
 
 .sticky-footer {
   position: fixed;
-  bottom: 0;
-  width: 100%;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  border-radius: 14px;
+
   height: 60px;
   background: rgba(10, 20, 40, 0.75);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1000;
+    margin: 6px !important;
 }
 
 .footer-content {
