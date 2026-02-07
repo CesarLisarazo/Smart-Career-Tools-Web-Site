@@ -56,8 +56,8 @@ body.menu-open {
   height: 64px;
    background: linear-gradient(
     to top right,
-   #cacbdd,
-    #f9f9fd
+    #f9f9fd,
+    #cacbdd
   );
 
   z-index: 30;
