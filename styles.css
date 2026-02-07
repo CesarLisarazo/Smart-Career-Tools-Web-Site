@@ -240,7 +240,7 @@ body.menu-open {
   bottom: 100%;
 
   transform: translateX(7px) translateY(-10px);
-  font-size: 13px;
+  font-size: 12px;
   padding: 4px 8px;
   border-radius: 6px;
   background: rgba(10, 20, 40, 0.75);
