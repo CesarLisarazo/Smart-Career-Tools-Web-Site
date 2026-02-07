@@ -295,4 +295,8 @@ body.menu-open {
   .footer-content {
     font-size: 11px;
   }
+
+  #contact-toggle::after {
+    display: none;
+  }
 }
