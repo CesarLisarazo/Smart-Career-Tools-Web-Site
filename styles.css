@@ -106,68 +106,103 @@ body.menu-open {
    HAMBURGER
    ===================================================== */
 
-/* ================= HAMBURGER ICON ================= */
+
+
+
 
 #hamburger-button {
   display: none;
   width: 24px;
-  height: 16px;
+  height: 21px;
   position: relative;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-/* Barras */
+/* ================= ICON CONTAINERS ================= */
+
+#hamburger-button .icon {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= BARS BASE ================= */
 
 #hamburger-button .bar {
-  position: absolute;
-  left: 0;
   width: 100%;
   height: 3px;
   background: var(--text);
   border-radius: 3px;
-
-  transition:
-    transform 0.3s ease,
-    opacity 0.2s ease,
-    top 0.3s ease;
 }
 
-/* Posiciones iniciales */
+/* =====================================================
+   HAMBURGER ICON
+   ===================================================== */
 
-#hamburger-button .bar:nth-child(1) {
-  top: 0;
+/* Visible por defecto */
+
+#hamburger-button .hamburger {
+  opacity: 1;
+
+  /* Fade normal */
+  transition: opacity 0.2s ease 0.2s;
 }
 
-#hamburger-button .bar:nth-child(2) {
-  top: 8px;
+/* Cuando abre → desaparece sin delay */
+
+#hamburger-button.open .hamburger {
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-#hamburger-button .bar:nth-child(3) {
-  top: 16px;
-}
-/* Cuando el menú está abierto */
+/* =====================================================
+   CLOSE (X) ICON
+   ===================================================== */
 
-#hamburger-button.open .bar:nth-child(1) {
-  top: 11px;
+/* Oculta por defecto */
+
+#hamburger-button .close {
+  opacity: 0;
+
+  justify-content: center;
+  align-items: center;
+
+  /* Fade inmediato al ocultarse */
+  transition: opacity 0.2s ease;
+}
+
+/* Barras cruz */
+
+#hamburger-button .close .bar {
+  position: absolute;
+}
+
+#hamburger-button .close .bar:nth-child(1) {
   transform: rotate(45deg);
 }
 
-#hamburger-button.open .bar:nth-child(2) {
-  opacity: 0;
-}
-
-#hamburger-button.open .bar:nth-child(3) {
-  top: 11px;
+#hamburger-button .close .bar:nth-child(2) {
   transform: rotate(-45deg);
 }
 
+/* =====================================================
+   STATE — MENU OPEN
+   ===================================================== */
 
+/* X aparece después de que desaparece hamburguesa */
 
-#hamburger-button .bar {
-  transform-origin: center;
+#hamburger-button.open .close {
+  opacity: 1;
+  transition: opacity 0.2s ease 0.2s;
 }
+
+
 /* =====================================================
    MOBILE MENU
    ===================================================== */
@@ -246,6 +281,8 @@ body.menu-open {
   -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
   border-top: 1px solid rgba(255, 255, 255, 0.08); /* Borde superior sutil */
   z-index: 1000; /* Capa muy alta para estar siempre visible */
+ background-clip: padding-box;
+
 }
 
 .footer-content {
@@ -260,6 +297,7 @@ body.menu-open {
 
    color: rgba(255, 255, 255, 0.75);
   font-size: 13px;
+
 }
 .footer-links a {
   text-decoration: none; /* Sin subrayado */
@@ -283,6 +321,9 @@ body.menu-open {
 .footer-links {
   min-width: 120px; /* ancho máximo del texto que aparece */
   text-align: right;
+}
+body.menu-open .sticky-footer {
+  pointer-events: none;
 }
 /* =====================================================
 CONTACT TOGGLE
