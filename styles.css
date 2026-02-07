@@ -35,7 +35,7 @@ body {
   background-attachment: fixed;
   background-color: #1f2632;
 
-  padding-bottom: 60px; /* espacio para footer fijo */
+  padding-bottom: 60px;
 }
 
 body.menu-open {
@@ -51,19 +51,12 @@ body.menu-open {
   top: 10px;
   left: 10px;
   right: 10px;
-  border-radius: 14px 14px 0 0;
- 
   height: 64px;
-   background: linear-gradient(
-    to top right,
-    #f9f9fd,
-    #cacbdd
-  );
 
-  z-index: 30;
+  border-radius: 14px 14px 0 0;
+  background: linear-gradient(to top right, #f9f9fd, #cacbdd);
   box-shadow: rgba(0, 0, 0, 0.08) 0 4px 8px;
-
-
+  z-index: 30;
 }
 
 #nav-container {
@@ -126,11 +119,7 @@ body.menu-open {
   left: 12px;
   right: 12px;
 
-  background: linear-gradient(
-    to top right,
-    #dfdfe9,
-    #cacbdd
-  );
+  background: linear-gradient(to top right, #dfdfe9, #cacbdd);
   padding: 8px 0;
   border-radius: 18px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
@@ -190,14 +179,14 @@ body.menu-open {
   bottom: 6px;
   left: 10px;
   right: 10px;
-  border-radius: 14px;
 
   height: 50px;
-  background: rgba(10, 20, 40, 0.75);
+  border-radius: 14px;
+  background: rgba(10, 20, 40, 0.85);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1000;
-  
 }
 
 .footer-content {
@@ -219,19 +208,16 @@ body.menu-open {
   color: rgba(255, 255, 255, 0.75);
 }
 
-
 /* =====================================================
-   toogle
+   CONTACT TOGGLE
    ===================================================== */
+
 #contact-toggle {
   cursor: pointer;
-  display: inline-block;
   position: relative;
-  min-width: 40%;
-  text-align: right;
+  white-space: nowrap;
 }
 
-/* texto */
 .contact-text {
   display: inline-block;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -242,29 +228,18 @@ body.menu-open {
   transform: translateX(-20px);
 }
 
-/* estado email */
-#contact-toggle.is-email .contact-text {
-  font-weight: 500;
-}
-
-/* hint */
 #contact-toggle::after {
   content: "Copiado";
   position: absolute;
-
-  /* 🔑 ancla segura */
   right: 0;
   bottom: 100%;
 
-  /* ajuste fino */
-  transform: translateX(7px) translateY(-20px);
-
+  transform: translateX(7px) translateY(-10px);
   font-size: 11px;
   padding: 4px 8px;
   border-radius: 6px;
   background: rgb(10, 20, 40);
   color: white;
-  white-space: nowrap;
 
   opacity: 0;
   pointer-events: none;
@@ -275,6 +250,7 @@ body.menu-open {
   opacity: 1;
   transform: translateX(7px) translateY(-20px);
 }
+
 /* =====================================================
    RESPONSIVE
    ===================================================== */
@@ -293,8 +269,6 @@ body.menu-open {
   }
 
   .footer-content {
-    font-size: 11px;
+    font-size: 12px;
   }
-
-
 }
