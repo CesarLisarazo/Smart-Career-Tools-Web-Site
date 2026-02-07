@@ -92,7 +92,7 @@ body.menu-open {
 
 #title {
   font-size: 16px; /* Tamaño de fuente del título */
-  font-weight: 400; /* Grosor de fuente normal */
+  font-weight: 500; /* Grosor de fuente normal */
 }
 
 #nav a {
