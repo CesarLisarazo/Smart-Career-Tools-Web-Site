@@ -151,7 +151,7 @@ body.menu-open {
   opacity: 1;
 
   /* Fade normal */
-  transition: opacity 0.2s ease 0.2s;
+  transition: opacity 0.15s ease 0.15s;
 }
 
 /* Cuando abre → desaparece sin delay */
