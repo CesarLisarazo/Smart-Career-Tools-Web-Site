@@ -249,7 +249,7 @@ body.menu-open {
 
 /* hint */
 #contact-toggle::after {
-  content: "E-mail copiado";
+  content: "Copiado";
   position: absolute;
 
   /* 🔑 ancla segura */
@@ -296,7 +296,5 @@ body.menu-open {
     font-size: 11px;
   }
 
-#contact-toggle::after {
-  content: "📋";
-}
+
 }
