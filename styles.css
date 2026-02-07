@@ -158,8 +158,9 @@ body.menu-open {
 
 #hamburger-button.open .hamburger {
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.15s ease;
 }
+
 
 /* =====================================================
    CLOSE (X) ICON
@@ -174,7 +175,7 @@ body.menu-open {
   align-items: center;
 
   /* Fade inmediato al ocultarse */
-  transition: opacity 0.2s ease;
+  transition: opacity 0.15s ease;
 }
 
 /* Barras cruz */
@@ -199,7 +200,7 @@ body.menu-open {
 
 #hamburger-button.open .close {
   opacity: 1;
-  transition: opacity 0.2s ease 0.2s;
+transition: opacity 0.15s ease 0.15s; 
 }
 
 
