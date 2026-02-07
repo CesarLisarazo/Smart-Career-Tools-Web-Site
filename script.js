@@ -1,32 +1,32 @@
 // ================= MENU =================
 
-const hamburgerButton = document.getElementById("hamburger-button");
-const mobileMenu = document.getElementById("mobile-menu");
-const overlay = document.getElementById("menu-overlay");
+const hamburgerButton = document.getElementById("hamburger-button"); // Obtiene el botón de menú hamburguesa por su ID
+const mobileMenu = document.getElementById("mobile-menu"); // Obtiene el contenedor del menú móvil
+const overlay = document.getElementById("menu-overlay"); // Obtiene la capa de fondo oscuro (overlay)
 
-function openMenu() {
-  mobileMenu.classList.add("open");
-  overlay.classList.add("open");
-  document.body.classList.add("menu-open");
-  hamburgerButton.setAttribute("aria-expanded", "true");
+function openMenu() { // Función para abrir el menú
+  mobileMenu.classList.add("open"); // Agrega la clase 'open' al menú para mostrarlo
+  overlay.classList.add("open"); // Agrega la clase 'open' al overlay para mostrarlo
+  document.body.classList.add("menu-open"); // Bloquea el scroll del body agregando una clase
+  hamburgerButton.setAttribute("aria-expanded", "true"); // Actualiza el atributo de accesibilidad para indicar que está expandido
 }
 
-function closeMenu() {
-  mobileMenu.classList.remove("open");
-  overlay.classList.remove("open");
-  document.body.classList.remove("menu-open");
-  hamburgerButton.setAttribute("aria-expanded", "false");
+function closeMenu() { // Función para cerrar el menú
+  mobileMenu.classList.remove("open"); // Quita la clase 'open' del menú para ocultarlo
+  overlay.classList.remove("open"); // Quita la clase 'open' del overlay
+  document.body.classList.remove("menu-open"); // Restaura el scroll del body quitando la clase
+  hamburgerButton.setAttribute("aria-expanded", "false"); // Actualiza el atributo de accesibilidad para indicar que está colapsado
 }
 
-hamburgerButton.addEventListener("click", (e) => {
-  e.stopPropagation();
-  mobileMenu.classList.contains("open") ? closeMenu() : openMenu();
+hamburgerButton.addEventListener("click", (e) => { // Escucha el evento click en el botón hamburguesa
+  e.stopPropagation(); // Evita que el evento se propague a otros elementos
+  mobileMenu.classList.contains("open") ? closeMenu() : openMenu(); // Alterna entre abrir y cerrar dependiendo si ya tiene la clase 'open'
 });
 
-overlay.addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu); // Cierra el menú si se hace click en el fondo oscuro (overlay)
 
-mobileMenu.addEventListener("click", (e) => {
-  if (e.target.tagName === "A") closeMenu();
+mobileMenu.addEventListener("click", (e) => { // Escucha clicks dentro del menú móvil
+  if (e.target.tagName === "A") closeMenu(); // Si el elemento clickeado es un enlace (<a>), cierra el menú
 });
 
 // ================= CONTACT TOGGLE =================

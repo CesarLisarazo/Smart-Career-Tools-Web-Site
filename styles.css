@@ -3,23 +3,23 @@
    ===================================================== */
 
 html {
-  overflow-y: scroll;
+  overflow-y: scroll; /* Fuerza la barra de desplazamiento vertical para evitar saltos de diseño */
 }
 
 html, body {
-  height: 100%;
-  margin: 0;
+  height: 100%; /* Asegura que el html y body ocupen toda la altura de la ventana */
+  margin: 0; /* Elimina los márgenes por defecto del navegador */
 }
 
 * {
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho y alto de los elementos */
+  -webkit-tap-highlight-color: transparent; /* Elimina el color de resaltado al tocar en dispositivos móviles (iOS/Android) */
 }
 
 :root {
-  --text: #0f172a;
-  --border: #e5e7eb;
-  --max-width: 1100px;
+  --text: #0f172a; /* Define una variable CSS para el color de texto principal */
+  --border: #e5e7eb; /* Define una variable CSS para el color de bordes */
+  --max-width: 1100px; /* Define una variable CSS para el ancho máximo del contenido */
 }
 
 /* =====================================================
@@ -27,24 +27,24 @@ html, body {
    ===================================================== */
 
 body {
-  font-family: Inter, system-ui, sans-serif;
-  background-color: #1f2632;
-  padding-bottom: 60px;
+  font-family: Inter, system-ui, sans-serif; /* Establece la tipografía principal */
+  background-color: #1f2632; /* Color de fondo de respaldo si la imagen no carga */
+  padding-bottom: 60px; /* Espacio inferior para evitar que el footer fijo tape contenido */
 }
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0; /* top, right, bottom, left = 0 */
+  content: ""; /* Necesario para que el pseudo-elemento se renderice */
+  position: fixed; /* Fija el fondo para que no se mueva al hacer scroll */
+  inset: 0; /* top, right, bottom, left = 0. Ocupa toda la pantalla */
 
-  background-image: url("./img/background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("./img/background.png"); /* Imagen de fondo */
+  background-size: cover; /* Escala la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 
-  z-index: -1; /* queda detrás de todo */
+  z-index: -1; /* Coloca este elemento detrás de todo el contenido */
 }
 body.menu-open {
-  overflow: hidden;
+  overflow: hidden; /* Evita el scroll en el body cuando el menú móvil está abierto */
 }
 
 /* =====================================================
@@ -52,54 +52,54 @@ body.menu-open {
    ===================================================== */
 
 #header {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  height: 64px;
+  position: fixed; /* Fija el header en la parte superior de la ventana */
+  top: 12px; /* Separación desde el borde superior */
+  left: 13rem; /* Separación desde el borde izquierdo */
+  right: 13rem; /* Separación desde el borde derecho */
+  height: 64px; /* Altura fija del header */
 
-  border-radius: 14px;
-  background: linear-gradient(to top right, #f9f9fd, #cacbdd);
-  box-shadow: rgba(0, 0, 0, 0.08) 0 4px 8px;
-  z-index: 30;
+  border-radius: 14px; /* Bordes redondeados */
+  background: linear-gradient(to top right, #f9f9fd, #cacbdd); /* Fondo con degradado */
+  box-shadow: rgba(0, 0, 0, 0.08) 0 4px 8px; /* Sombra suave */
+  z-index: 30; /* Asegura que el header esté por encima de otros elementos */
 }
 
 #nav-container {
-  max-width: var(--max-width);
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 24px;
+  max-width: var(--max-width); /* Limita el ancho usando la variable definida */
+  height: 100%; /* Ocupa toda la altura del header */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 24px; /* Espaciado interno lateral */
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Activa Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos hijos */
+  justify-content: space-between; /* Distribuye espacio entre el logo y la navegación */
 }
 
 #main-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex; /* Flexbox para alinear imagen y texto del logo */
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espacio entre la imagen y el texto */
 }
 
 #main-logo a {
-  text-decoration: none;
-  color: black;
+  text-decoration: none; /* Quita el subrayado del enlace */
+  color: black; /* Color del texto del logo */
 }
 
 #logo {
-  height: 65%;
+  height: 65%; /* Altura de la imagen relativa al contenedor padre */
 }
 
 #title {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 16px; /* Tamaño de fuente del título */
+  font-weight: 400; /* Grosor de fuente normal */
 }
 
 #nav a {
-  margin-right: 24px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
+  margin-right: 24px; /* Espacio a la derecha de cada enlace */
+  text-decoration: none; /* Quita el subrayado */
+  color: var(--text); /* Usa el color de texto definido en variables */
+  font-weight: 500; /* Grosor de fuente medio */
 }
 
 /* =====================================================
@@ -107,11 +107,11 @@ body.menu-open {
    ===================================================== */
 
 #hamburger-button {
-  display: none;
-  font-size: 26px;
-  background: none;
-  border: none;
-  cursor: pointer;
+  display: none; /* Oculto por defecto en escritorio */
+  font-size: 26px; /* Tamaño del icono */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
 }
 
 /* =====================================================
@@ -119,41 +119,41 @@ body.menu-open {
    ===================================================== */
 
 #mobile-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 12px;
-  right: 12px;
+  position: absolute; /* Posicionamiento absoluto respecto al header */
+  top: calc(100% + 8px); /* Se ubica justo debajo del header + 8px de espacio */
+  left: 12px; /* Margen izquierdo */
+  right: 12px; /* Margen derecho */
 
-  background: linear-gradient(to top right, #dfdfe9, #cacbdd);
-  padding: 8px 0;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  z-index: 60;
+  background: linear-gradient(to top right, #dfdfe9, #cacbdd); /* Fondo degradado */
+  padding: 8px 0; /* Padding vertical */
+  border-radius: 18px; /* Bordes muy redondeados */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); /* Sombra pronunciada */
+  z-index: 60; /* Capa superior (encima del overlay) */
 
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Flexbox para lista vertical */
+  flex-direction: column; /* Dirección vertical */
 
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
+  opacity: 0; /* Invisible inicialmente */
+  transform: translateY(-10px); /* Desplazado ligeramente hacia arriba */
+  pointer-events: none; /* No interactuable cuando está oculto */
 
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease; /* Animación suave de aparición */
 }
 
 #mobile-menu.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  opacity: 1; /* Totalmente visible */
+  transform: translateY(0); /* Posición original */
+  pointer-events: auto; /* Interactuable */
 }
 
 .mobile-link {
-  margin: 10px 12px 0;
-  padding: 16px 20px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  border-radius: 12px;
-  background: #f8fafc62;
+  margin: 10px 12px 0; /* Margen superior y lateral */
+  padding: 16px 20px; /* Espaciado interno generoso para tocar fácilmente */
+  text-decoration: none; /* Sin subrayado */
+  color: var(--text); /* Color de texto */
+  font-weight: 500; /* Grosor medio */
+  border-radius: 12px; /* Bordes redondeados en los enlaces */
+  background: #f8fafc62; /* Fondo semitransparente */
 }
 
 /* =====================================================
@@ -161,18 +161,18 @@ body.menu-open {
    ===================================================== */
 
 #menu-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 40;
-  transition: opacity 0.25s ease;
+  position: fixed; /* Cubre toda la ventana */
+  inset: 0; /* top, right, bottom, left = 0 */
+  background: rgba(0, 0, 0, 0.35); /* Fondo negro semitransparente */
+  opacity: 0; /* Invisible por defecto */
+  pointer-events: none; /* Clicks pasan a través */
+  z-index: 40; /* Debajo del menú móvil pero encima del resto */
+  transition: opacity 0.25s ease; /* Transición de opacidad */
 }
 
 #menu-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
+  opacity: 1; /* Visible */
+  pointer-events: auto; /* Bloquea clicks en el contenido de abajo */
 }
 
 /* =====================================================
@@ -180,18 +180,18 @@ body.menu-open {
    ===================================================== */
 
 .sticky-footer {
-  position: fixed;
-  bottom: 6px;
-  left: 10px;
-  right: 10px;
+  position: fixed; /* Fijo en la pantalla */
+  bottom: 6px; /* Pegado al borde inferior */
+  left: 10px; /* Margen izquierdo */
+  right: 10px; /* Margen derecho */
 
-  height: 50px;
-  border-radius: 14px;
-  background: rgba(10, 20, 40, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 1000;
+  height: 50px; /* Altura fija */
+  border-radius: 14px; /* Bordes redondeados */
+  background: rgba(10, 20, 40, 0.85); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo (glassmorphism) */
+  -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* Borde superior sutil */
+  z-index: 1000; /* Capa muy alta para estar siempre visible */
 }
 
 .footer-content {
@@ -202,76 +202,130 @@ body.menu-open {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;absoluta
 
   color: rgba(255, 255, 255, 0.75);
   font-size: 13px;
 }
-
 .footer-links a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none; /* Sin subrayado */
+  color: rgba(255, 255, 255, 0.75); /* Mismo color que el texto */
 }
 
+#copyright {
+  color: rgba(255, 255, 255, 0.75);
+  display: none;}
+  
+  #copyright-container {
+    color: rgba(255, 255, 255, 0.75);
+  display: flex;}
+
+#copyright-desktop {
+  justify-self: center;
+  white-space: nowrap;
+  transform: translateX(40px);
+  color: rgba(255, 255, 255, 0.75);
+}
+.footer-links {
+  min-width: 120px; /* ancho máximo del texto que aparece */
+  text-align: right;
+}
 /* =====================================================
-   CONTACT TOGGLE
-   ===================================================== */
+CONTACT TOGGLE
+===================================================== */
 
 #contact-toggle {
-  cursor: pointer;
-  position: relative;
-  white-space: nowrap;
+
+  text-align: right;
+
+}
+
+#contact-toggle-container{
+    width: 184px; /* o el ancho del email */
+  position: relative; /* 🔑 ANCLA DEL HINT */
+
 }
 
 .contact-text {
-  display: inline-block;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-block; /* Comportamiento de bloque en línea para transformaciones */
+  transition: opacity 0.2s ease, transform 0.2s ease; /* Animación de cambio */
 }
 
 .contact-text.is-fading {
-  opacity: 0;
-  transform: translateX(-20px);
+  opacity: 0; /* Invisible */
+  transform: translateX(-20px); /* Desplazado a la izquierda */
 }
 
 #contact-toggle::after {
-  content: "Copiado";
-  position: absolute;
+  content: "Copiado"; /* Texto del tooltip */
+  position: absolute; /* Posicionamiento absoluto respecto al toggle */
   right: 0;
-  bottom: 100%;
+  bottom: 100%; /* Encima del elemento */
 
-  transform: translateX(7px) translateY(-10px);
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 6px;
-  background: rgba(10, 20, 40, 0.75);
-   color: rgba(255, 255, 255, 0.75);
+  transform: translateX(7px) translateY(-10px); /* Ajuste fino de posición */
+  font-size: 12px; /* Texto pequeño */
+  padding: 4px 8px; /* Espaciado interno */
+  border-radius: 6px; /* Bordes redondeados */
+  background: rgba(10, 20, 40, 0.75); /* Fondo oscuro */
+   color: rgba(255, 255, 255, 0.75); /* Texto claro */
 
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0; /* Oculto por defecto */
+  pointer-events: none; /* No interactuable */
+  transition: opacity 0.2s ease, transform 0.2s ease; /* Animación */
 }
 
 #contact-toggle.show-hint::after {
-  opacity: 1;
-  transform: translateX(7px) translateY(-20px);
+  opacity: 1; /* Visible */
+  transform: translateX(7px) translateY(-20px); /* Se mueve un poco hacia arriba al aparecer */
 }
 
 /* =====================================================
    RESPONSIVE
    ===================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 975px) {
   #nav {
-    display: none;
+    display: none; /* Oculta navegación de escritorio en móviles */
   }
 
   #hamburger-button {
-    display: block;
+    display: block; /* Muestra botón hamburguesa en móviles */
   }
 
   body {
-    background-attachment: scroll;
+    background-attachment: scroll; /* El fondo se mueve con el scroll en móviles (mejor rendimiento) */
   }
 
+#header {
 
+  left: 12px; /* Separación desde el borde izquierdo */
+  right: 12px; /* Separación desde el borde derecho */
+
+}
+
+#copyright {
+  display: flex;
+margin-right: 4px;}
+#copyright-desktop {
+  display: none;}
+
+
+}
+
+
+
+/* =====================================================
+   DESKTOP
+   ===================================================== */
+@media (min-width: 976px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  #copyright-desktop {
+    justify-self: center;
+    white-space: nowrap;
+  }
 }
