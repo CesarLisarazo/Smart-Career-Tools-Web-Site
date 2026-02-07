@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -11,109 +11,57 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
-<body id="body">
+<body>
 
   <!-- ================= HEADER ================= -->
   <header id="header">
-
     <div id="nav-container">
-      <div id="main-logo"> <!-- Logo -->
-        <img id="logo" src="./img/logo.png" alt="smart Career Tools">
-        <!-- Logo -->
-       <a href="index.html"> <h1 id="tittle">
-          Smart Career Tools
-        </h1>
+
+      <div id="main-logo">
+        <img id="logo" src="./img/logo.png" alt="Smart Career Tools logo">
+        <a href="index.html">
+          <h1 id="title">Smart Career Tools</h1>
         </a>
       </div>
 
       <!-- Navegación desktop -->
       <nav id="nav">
-        
-        <a id="nav-pricing" href="#form">Descargas</a>
-        <a id="nav-about" href="./blogs.html">Blog</a>
-        <a id="nav-about" href="https://sheetsresume.com/r/smart-career-tools">Sheets resume</a>
+        <a id="nav-download" href="#form">Descargas</a>
+        <a href="./blogs.html">Blog</a>
+        <a href="https://sheetsresume.com/r/smart-career-tools">Sheets resume</a>
       </nav>
 
-      <!-- Botón hamburguesa (mobile) -->
-      <button id="hamburger-button" aria-label="Open menu">
-        ☰
-      </button>
-
+      <!-- Botón hamburguesa -->
+      <button id="hamburger-button" aria-label="Abrir menú">☰</button>
     </div>
 
+    <!-- Overlay -->
     <div id="menu-overlay"></div>
+
     <!-- Menú mobile -->
     <div id="mobile-menu">
-      <a id="mobile-templates" class="mobile-link" href="https://sheetsresumecom.sjv.io/DyDLMq"> 🔼 Escanea tu CV</a>
-      <a id="mobile-pricing" class="mobile-link" href="#email"> 🔽 Descargas</a>
-      <a id="mobile-about" class="mobile-link" href="./blogs.html"> 📝 Blog</a>
-      <a id="nav-about" href="https://sheetsresume.com/r/smart-career-tools"> 🔗 Sheets resume</a>
+      <a class="mobile-link" href="https://sheetsresumecom.sjv.io/DyDLMq">🔼 Escanea tu CV</a>
+      <a class="mobile-link" href="#form">🔽 Descargas</a>
+      <a class="mobile-link" href="./blogs.html">📝 Blog</a>
+      <a class="mobile-link" href="https://sheetsresume.com/r/smart-career-tools">🔗 Sheets resume</a>
     </div>
-
   </header>
 
-
-
-  <!-- ================= MAIN ================= -->
-  <div id="main-tittle">
-    <h2>El Robot ATS está rechazando tu CV?</h2>
-  </div>
-
- <div id="main-container">
-
-  <!-- ===== HERO (texto derecha en desktop) ===== -->
-  <section id="hero">
-    <h3>
-      Subí tu currículum, escanealo gratis y descubrí tu puntaje +
-      cómo aumentarlo
-    </h3>
-
-    <p class="hero-subtitle">
-      Tu perfil es idóneo, tu currículum no.
-      <br>
-      Arreglémoslo.
-    </p>
-    <a  href="https://sheetsresumecom.sjv.io/DyDLMq" id="hero-button"> Escanear mi CV</a>
-  </section>
-
-  <!-- ===== FORM (izquierda en desktop) ===== -->
-  <section id="form">
-    <form>
-      <label for="email"><h3>Vence al filtro: Descarga la checklist de 10 puntos Anti-ATS definitiva y gratuita</h3></label>
-
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Ingresa tu email"
-        required
-      >
-
-      <button type="submit">
-        Quiero mi Checklist
-      </button>
-    </form>
-  </section>
-
-    <section id="image-container">
-      <!-- Vos cargás la imagen acá -->
-      <img src="./img/wideposteo vertical copy.jpg" alt="Checklist ATS preview">
-    </section>
-
-
-
-  <!-- ===== IMAGE (debajo, ancho completo) ===== -->
-
-</div>
-
-
-
-
+  <!-- ================= FOOTER ================= -->
+  <footer class="sticky-footer">
+    <div class="footer-content">
+      <span>© 2026 <div>Smart Career Tools</div></span>
+      <nav class="footer-links">
+        <a href="#"><div>Contacto:</div> cesar@smartcareertools.com</a>
+      </nav>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
