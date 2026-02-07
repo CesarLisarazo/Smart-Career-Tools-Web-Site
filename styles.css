@@ -221,7 +221,7 @@ body.menu-open {
 
 
 /* =====================================================
-   manejo de la seleccion de texto de email
+   toogle
    ===================================================== */
 #contact-toggle {
   cursor: pointer;
@@ -257,12 +257,12 @@ body.menu-open {
   bottom: 100%;
 
   /* ajuste fino */
-  transform: translateX(0px) translateY(-6px);
+  transform: translateX(7px) translateY(-20px);
 
   font-size: 11px;
   padding: 4px 8px;
   border-radius: 6px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgb(10, 20, 40);
   color: white;
   white-space: nowrap;
 
@@ -273,7 +273,7 @@ body.menu-open {
 
 #contact-toggle.show-hint::after {
   opacity: 1;
-  transform: translateX(0px) translateY(-10px);
+  transform: translateX(7px) translateY(-20px);
 }
 /* =====================================================
    RESPONSIVE

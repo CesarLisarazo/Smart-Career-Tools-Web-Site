@@ -47,46 +47,49 @@ if (descargasLink && emailInput) {
 
 // manejamos el evento click del footer
 const contactLink = document.getElementById("contact-toggle");
-const textSpan = contactLink?.querySelector(".contact-text");
+const textEl = contactLink?.querySelector(".contact-text");
 
-if (contactLink && textSpan) {
+if (contactLink && textEl) {
   const email = "cesar@smartcareertools.com";
   let showingEmail = false;
-  const fadeDuration = 200;
+  let hintShownOnce = false;
 
   contactLink.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // MOSTRAR EMAIL
+    // 1️⃣ Mostrar email
     if (!showingEmail) {
-      textSpan.classList.add("is-fading");
+      textEl.classList.add("is-fading");
 
       setTimeout(() => {
-        textSpan.textContent = email;
+        textEl.textContent = email;
+        textEl.classList.remove("is-fading");
         showingEmail = true;
-        textSpan.classList.remove("is-fading");
-        contactLink.classList.add("is-email");
-      }, fadeDuration);
+      }, 200);
 
       return;
     }
 
-    // EMAIL → COPIAR + FEEDBACK EN PARALELO
-    navigator.clipboard.writeText(email).catch(() => {});
+    // 2️⃣ Copiar
+    navigator.clipboard.writeText(email);
 
-    contactLink.classList.add("show-hint");
-    textSpan.classList.add("is-fading");
+    // 3️⃣ Hint (una sola vez)
+    if (!hintShownOnce) {
+      hintShownOnce = true;
+      contactLink.classList.add("show-hint");
+
+      setTimeout(() => {
+        contactLink.classList.remove("show-hint");
+      }, 1200);
+    }
+
+    // 4️⃣ Volver a "Contacto" con animación
+    textEl.classList.add("is-fading");
 
     setTimeout(() => {
-      textSpan.textContent = "Contacto";
+      textEl.textContent = "Contacto";
+      textEl.classList.remove("is-fading");
       showingEmail = false;
-      textSpan.classList.remove("is-fading");
-      contactLink.classList.remove("is-email");
-    }, fadeDuration);
-
-    setTimeout(() => {
-      contactLink.classList.remove("show-hint");
-    }, 900);
+    }, 200);
   });
 }
-
