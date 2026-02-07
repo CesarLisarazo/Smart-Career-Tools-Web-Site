@@ -296,7 +296,7 @@ body.menu-open {
     font-size: 11px;
   }
 
-  #contact-toggle::after {
-    display: none;
-  }
+#contact-toggle::after {
+  content: "🗐";
+}
 }
