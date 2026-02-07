@@ -36,8 +36,8 @@ body::before {
   position: fixed; /* Fija el fondo para que no se mueva al hacer scroll */
   inset: 0; /* top, right, bottom, left = 0. Ocupa toda la pantalla */
 
-  background-image: url("./img/background.png"); /* Imagen de fondo */
-  background-size: cover; /* Escala la imagen para cubrir todo el contenedor */
+  background-image: url("./img/background.jpg"); /* Imagen de fondo */
+  background-size:cover; /* Escala la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen de fondo */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
 
