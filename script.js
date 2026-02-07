@@ -44,3 +44,23 @@ if (descargasLink && emailInput) {
     }, 300);
   });
 }
+
+// manejamos el eevnto click del footer
+const contactLink = document.getElementById("contact-toggle");
+
+if (contactLink) {
+  const email = "cesar@smartcareertools.com";
+  let showingEmail = false;
+
+  contactLink.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (!showingEmail) {
+      contactLink.textContent = email;
+      showingEmail = true;
+    } else {
+      contactLink.textContent = "Contacto";
+      showingEmail = false;
+    }
+  });
+}
