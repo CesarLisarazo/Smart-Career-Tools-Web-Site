@@ -28,16 +28,21 @@ html, body {
 
 body {
   font-family: Inter, system-ui, sans-serif;
+  background-color: #1f2632;
+  padding-bottom: 60px;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0; /* top, right, bottom, left = 0 */
+
   background-image: url("./img/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #1f2632;
 
-  padding-bottom: 60px;
+  z-index: -1; /* queda detrás de todo */
 }
-
 body.menu-open {
   overflow: hidden;
 }
@@ -53,7 +58,7 @@ body.menu-open {
   right: 10px;
   height: 64px;
 
-  border-radius: 14px 14px 0 0;
+  border-radius: 14px;
   background: linear-gradient(to top right, #f9f9fd, #cacbdd);
   box-shadow: rgba(0, 0, 0, 0.08) 0 4px 8px;
   z-index: 30;
@@ -235,11 +240,11 @@ body.menu-open {
   bottom: 100%;
 
   transform: translateX(7px) translateY(-10px);
-  font-size: 11px;
+  font-size: 13px;
   padding: 4px 8px;
   border-radius: 6px;
-  background: rgb(10, 20, 40);
-  color: white;
+  background: rgba(10, 20, 40, 0.75);
+   color: rgba(255, 255, 255, 0.75);
 
   opacity: 0;
   pointer-events: none;

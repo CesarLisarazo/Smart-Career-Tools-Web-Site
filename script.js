@@ -49,7 +49,7 @@ if (contactLink && textEl) {
         textEl.textContent = email;
         textEl.classList.remove("is-fading");
         showingEmail = true;
-      }, 200);
+      }, 400);
 
       return;
     }
@@ -71,6 +71,6 @@ if (contactLink && textEl) {
       textEl.textContent = "Contacto";
       textEl.classList.remove("is-fading");
       showingEmail = false;
-    }, 200);
+    }, 400);
   });
 }
