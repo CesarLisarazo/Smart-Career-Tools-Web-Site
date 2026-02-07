@@ -197,14 +197,14 @@ body.menu-open {
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1000;
-    margin: 6px !important;
+  
 }
 
 .footer-content {
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
 
   display: flex;
   align-items: center;
@@ -223,24 +223,58 @@ body.menu-open {
 /* =====================================================
    manejo de la seleccion de texto de email
    ===================================================== */
-
-
 #contact-toggle {
   cursor: pointer;
+  display: inline-block;
+  position: relative;
+  min-width: 40%;
+  text-align: right;
+}
+
+/* texto */
+.contact-text {
   display: inline-block;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-#contact-toggle.is-fading {
+.contact-text.is-fading {
   opacity: 0;
   transform: translateX(-20px);
 }
 
-
-#contact-toggle:has(:not()) {
-  user-select: text;
+/* estado email */
+#contact-toggle.is-email .contact-text {
+  font-weight: 500;
 }
 
+/* hint */
+#contact-toggle::after {
+  content: "E-mail copiado";
+  position: absolute;
+
+  /* 🔑 ancla segura */
+  right: 0;
+  bottom: 100%;
+
+  /* ajuste fino */
+  transform: translateX(0px) translateY(-6px);
+
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#contact-toggle.show-hint::after {
+  opacity: 1;
+  transform: translateX(0px) translateY(-10px);
+}
 /* =====================================================
    RESPONSIVE
    ===================================================== */

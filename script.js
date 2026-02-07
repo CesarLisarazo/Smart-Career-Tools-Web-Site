@@ -45,28 +45,48 @@ if (descargasLink && emailInput) {
   });
 }
 
-// manejamos el eevnto click del footer
+// manejamos el evento click del footer
 const contactLink = document.getElementById("contact-toggle");
+const textSpan = contactLink?.querySelector(".contact-text");
 
-if (contactLink) {
+if (contactLink && textSpan) {
   const email = "cesar@smartcareertools.com";
   let showingEmail = false;
-  const duration = 200; // debe matchear el CSS
+  const fadeDuration = 200;
 
   contactLink.addEventListener("click", (e) => {
     e.preventDefault();
 
-    contactLink.classList.add("is-fading");
+    // MOSTRAR EMAIL
+    if (!showingEmail) {
+      textSpan.classList.add("is-fading");
+
+      setTimeout(() => {
+        textSpan.textContent = email;
+        showingEmail = true;
+        textSpan.classList.remove("is-fading");
+        contactLink.classList.add("is-email");
+      }, fadeDuration);
+
+      return;
+    }
+
+    // EMAIL → COPIAR + FEEDBACK EN PARALELO
+    navigator.clipboard.writeText(email).catch(() => {});
+
+    contactLink.classList.add("show-hint");
+    textSpan.classList.add("is-fading");
 
     setTimeout(() => {
-      if (!showingEmail) {
-        contactLink.textContent = email;
-      } else {
-        contactLink.textContent = "Contacto";
-      }
+      textSpan.textContent = "Contacto";
+      showingEmail = false;
+      textSpan.classList.remove("is-fading");
+      contactLink.classList.remove("is-email");
+    }, fadeDuration);
 
-      showingEmail = !showingEmail;
-      contactLink.classList.remove("is-fading");
-    }, duration);
+    setTimeout(() => {
+      contactLink.classList.remove("show-hint");
+    }, 900);
   });
 }
+
