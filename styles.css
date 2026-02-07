@@ -106,14 +106,68 @@ body.menu-open {
    HAMBURGER
    ===================================================== */
 
+/* ================= HAMBURGER ICON ================= */
+
 #hamburger-button {
-  display: none; /* Oculto por defecto en escritorio */
-  font-size: 26px; /* Tamaño del icono */
-  background: none; /* Sin fondo */
-  border: none; /* Sin borde */
-  cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+  display: none;
+  width: 24px;
+  height: 16px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
+/* Barras */
+
+#hamburger-button .bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--text);
+  border-radius: 3px;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease,
+    top 0.3s ease;
+}
+
+/* Posiciones iniciales */
+
+#hamburger-button .bar:nth-child(1) {
+  top: 0;
+}
+
+#hamburger-button .bar:nth-child(2) {
+  top: 8px;
+}
+
+#hamburger-button .bar:nth-child(3) {
+  top: 16px;
+}
+/* Cuando el menú está abierto */
+
+#hamburger-button.open .bar:nth-child(1) {
+  top: 11px;
+  transform: rotate(45deg);
+}
+
+#hamburger-button.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-button.open .bar:nth-child(3) {
+  top: 11px;
+  transform: rotate(-45deg);
+}
+
+
+
+#hamburger-button .bar {
+  transform-origin: center;
+}
 /* =====================================================
    MOBILE MENU
    ===================================================== */
