@@ -80,7 +80,7 @@ if (contactLink && textEl) {
 
       setTimeout(() => {
         contactLink.classList.remove("show-hint");
-      }, 2300);
+      }, 2600);
     }
 
     // 4️⃣ Volver a "Contacto" con animación
