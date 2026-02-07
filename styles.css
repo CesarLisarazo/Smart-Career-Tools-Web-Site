@@ -128,8 +128,8 @@ body.menu-open {
 
   background: linear-gradient(
     to top right,
-   #b5b7cf,
-    #f9f9fd
+    #f9f9fd,
+    #cacbdd
   );
   padding: 8px 0;
   border-radius: 18px;
@@ -227,7 +227,15 @@ body.menu-open {
 
 #contact-toggle {
   cursor: pointer;
+  display: inline-block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
+
+#contact-toggle.is-fading {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
 
 #contact-toggle:has(:not()) {
   user-select: text;

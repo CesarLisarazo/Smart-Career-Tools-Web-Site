@@ -51,16 +51,22 @@ const contactLink = document.getElementById("contact-toggle");
 if (contactLink) {
   const email = "cesar@smartcareertools.com";
   let showingEmail = false;
+  const duration = 200; // debe matchear el CSS
 
   contactLink.addEventListener("click", (e) => {
     e.preventDefault();
 
-    if (!showingEmail) {
-      contactLink.textContent = email;
-      showingEmail = true;
-    } else {
-      contactLink.textContent = "Contacto";
-      showingEmail = false;
-    }
+    contactLink.classList.add("is-fading");
+
+    setTimeout(() => {
+      if (!showingEmail) {
+        contactLink.textContent = email;
+      } else {
+        contactLink.textContent = "Contacto";
+      }
+
+      showingEmail = !showingEmail;
+      contactLink.classList.remove("is-fading");
+    }, duration);
   });
 }
