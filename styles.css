@@ -297,6 +297,6 @@ body.menu-open {
   }
 
 #contact-toggle::after {
-  content: "🗐";
+  content: "📋";
 }
 }
