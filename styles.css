@@ -202,9 +202,9 @@ body.menu-open {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;absoluta
+  justify-content: space-between;
 
-  color: rgba(255, 255, 255, 0.75);
+   color: rgba(255, 255, 255, 0.75);
   font-size: 13px;
 }
 .footer-links a {
@@ -235,6 +235,7 @@ CONTACT TOGGLE
 ===================================================== */
 
 #contact-toggle {
+  cursor: pointer;
 
   text-align: right;
 
@@ -262,7 +263,7 @@ CONTACT TOGGLE
   right: 0;
   bottom: 100%; /* Encima del elemento */
 
-  transform: translateX(7px) translateY(-10px); /* Ajuste fino de posición */
+  transform: translateX(7px) translateY(-20px); /* Ajuste fino de posición */
   font-size: 12px; /* Texto pequeño */
   padding: 4px 8px; /* Espaciado interno */
   border-radius: 6px; /* Bordes redondeados */
