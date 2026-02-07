@@ -128,7 +128,7 @@ body.menu-open {
 
   background: linear-gradient(
     to top right,
-    #f9f9fd,
+    #dfdfe9,
     #cacbdd
   );
   padding: 8px 0;
@@ -159,7 +159,7 @@ body.menu-open {
   color: var(--text);
   font-weight: 500;
   border-radius: 12px;
-  background: #f8fafc6b;
+  background: #f8fafc62;
 }
 
 /* =====================================================
