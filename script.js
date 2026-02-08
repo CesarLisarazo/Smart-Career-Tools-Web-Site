@@ -37,7 +37,7 @@ const contactLink = document.getElementById("contact-toggle"); // Obtiene el ele
 const textEl = contactLink?.querySelector(".contact-text"); // Busca el elemento de texto interno (span) de forma segura
 
 if (contactLink && textEl) { // Verifica que ambos elementos existan antes de ejecutar la lógica
-  const email = "cesar@smartcareertools.com"; // Define la dirección de correo electrónico a utilizar
+  const email = "cesar@smartcareertools.com 📋"; // Define la dirección de correo electrónico a utilizar
   let showingEmail = false; // Variable de estado: ¿Se está mostrando el email actualmente?
   let hintShown = false; // Variable de estado: ¿Ya se mostró la notificación de "Copiado"?
 
