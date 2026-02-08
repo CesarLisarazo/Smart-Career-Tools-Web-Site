@@ -275,7 +275,7 @@ transition: opacity 0.15s ease 0.15s;
   left: 13rem; /* Separación desde el borde izquierdo */
   right: 13rem; /* Separación desde el borde derecho */
 
-  height: 50px; /* Altura fija */
+  height: 44px; /* Altura fija */
   border-radius: 14px; /* Bordes redondeados */
   background: rgba(10, 20, 40, 0.85); /* Fondo oscuro semitransparente */
   backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo (glassmorphism) */
