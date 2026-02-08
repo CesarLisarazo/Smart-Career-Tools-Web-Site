@@ -297,7 +297,7 @@ transition: opacity 0.15s ease 0.15s;
   justify-content: space-between;
 
    color: rgba(255, 255, 255, 0.75);
-  font-size: 11px;
+  font-size: 12px;
 
 }
 .footer-links a {
@@ -338,7 +338,7 @@ CONTACT TOGGLE
 }
 
 #contact-toggle-container{
-    width: 184px; /* o el ancho del email */
+    width: 190px; /* o el ancho del email */
   position: relative; /* 🔑 ANCLA DEL HINT */
 
 }
