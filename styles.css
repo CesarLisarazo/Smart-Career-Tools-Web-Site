@@ -157,39 +157,54 @@ body.menu-open {
    HAMBURGER
    ===================================================== */
 
-
-
-
-
 #hamburger-button {
   display: none;
+  /* Oculto por defecto, se muestra solo en móviles */
   width: 22px;
+  /* Ancho del botón */
   height: 19px;
+  /* Alto del botón */
   position: relative;
+  /* Posicionamiento relativo para los iconos absolutos dentro */
   background: none;
+  /* Sin fondo */
   border: none;
+  /* Sin borde */
   cursor: pointer;
+  /* Cursor de puntero al pasar sobre el botón */
+  overflow: hidden;
+  /* Oculta los elementos que se desplazan fuera del botón */
 }
 
 /* ================= ICON CONTAINERS ================= */
 
 #hamburger-button .icon {
   position: absolute;
+  /* Posicionamiento absoluto dentro del botón */
   inset: 0;
+  /* Ocupa todo el espacio del botón (top, right, bottom, left = 0) */
 
   display: flex;
+  /* Activa Flexbox */
   flex-direction: column;
+  /* Dirección vertical para las barras */
   justify-content: space-between;
+  /* Distribuye espacio entre las barras */
   align-items: center;
+  /* Centra las barras horizontalmente */
 }
 
 /* ================= BARS BASE ================= */
 
 #hamburger-button .bar {
   width: 100%;
+  /* Ancho completo del contenedor */
   height: 3px;
+  /* Altura de cada barra */
   background: var(--text);
+  /* Color de las barras usando la variable de texto */
   border-radius: 3px;
+  /* Bordes redondeados en las barras */
 }
 
 /* =====================================================
@@ -200,16 +215,23 @@ body.menu-open {
 
 #hamburger-button .hamburger {
   opacity: 1;
+  /* Totalmente visible */
+  transform: translateX(0);
+  /* Posición inicial: centrado */
 
-  /* Fade normal */
-  transition: opacity 0.15s ease 0.15s;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Animación combinada de opacidad y deslizamiento */
 }
 
-/* Cuando abre → desaparece sin delay */
+/* Cuando abre → se desvanece y se desliza hacia la derecha */
 
 #hamburger-button.open .hamburger {
   opacity: 0;
-  transition: opacity 0.15s ease;
+  /* Invisible cuando el menú está abierto */
+  transform: translateX(30px);
+  /* Se desplaza 30px a la derecha (fuera de vista) */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Animación combinada de opacidad y deslizamiento */
 }
 
 
@@ -221,37 +243,49 @@ body.menu-open {
 
 #hamburger-button .close {
   opacity: 0;
+  /* Invisible por defecto */
+  transform: translateX(-30px);
+  /* Posición inicial: desplazado a la izquierda (fuera de vista) */
 
   justify-content: center;
+  /* Centra las barras verticalmente */
   align-items: center;
+  /* Centra las barras horizontalmente */
 
-  /* Fade inmediato al ocultarse */
-  transition: opacity 0.15s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Animación combinada de opacidad y deslizamiento */
 }
 
 /* Barras cruz */
 
 #hamburger-button .close .bar {
   position: absolute;
+  /* Posicionamiento absoluto para superponer las barras */
 }
 
 #hamburger-button .close .bar:nth-child(1) {
   transform: rotate(45deg);
+  /* Rota la primera barra 45 grados */
 }
 
 #hamburger-button .close .bar:nth-child(2) {
   transform: rotate(-45deg);
+  /* Rota la segunda barra -45 grados para formar la X */
 }
 
 /* =====================================================
    STATE — MENU OPEN
    ===================================================== */
 
-/* X aparece después de que desaparece hamburguesa */
+/* X aparece y se desliza desde la izquierda */
 
 #hamburger-button.open .close {
   opacity: 1;
-  transition: opacity 0.15s ease 0.15s;
+  /* Visible cuando el menú está abierto */
+  transform: translateX(0);
+  /* Posición final: centrado */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Animación combinada de opacidad y deslizamiento */
 }
 
 
@@ -379,22 +413,30 @@ body.menu-open {
   z-index: 1000;
   /* Capa muy alta para estar siempre visible */
   background-clip: padding-box;
-
+  /* El fondo no se extiende más allá del padding */
 }
 
 .footer-content {
   max-width: 1200px;
+  /* Ancho máximo del contenido del footer */
   height: 100%;
+  /* Ocupa toda la altura del footer */
   margin: 0 auto;
+  /* Centra horizontalmente */
   padding: 0 16px;
+  /* Espaciado interno lateral */
 
   display: flex;
+  /* Activa Flexbox */
   align-items: center;
+  /* Centra verticalmente */
   justify-content: space-between;
+  /* Distribuye espacio entre elementos */
 
   color: rgba(255, 255, 255, 0.75);
+  /* Color de texto blanco semitransparente */
   font-size: 12px;
-
+  /* Tamaño de fuente pequeño */
 }
 
 .footer-links a {
@@ -406,29 +448,39 @@ body.menu-open {
 
 #copyright {
   color: rgba(255, 255, 255, 0.75);
+  /* Color de texto blanco semitransparente */
   display: none;
+  /* Oculto por defecto, se muestra solo en móviles */
 }
 
 #copyright-container {
   color: rgba(255, 255, 255, 0.75);
+  /* Color de texto blanco semitransparente */
   display: flex;
+  /* Activa Flexbox */
 }
 
 #copyright-desktop {
   justify-self: center;
+  /* Se centra en su celda de grid */
   white-space: nowrap;
+  /* Evita que el texto se divida en varias líneas */
   transform: translateX(40px);
+  /* Desplaza el texto 40px a la derecha */
   color: rgba(255, 255, 255, 0.75);
+  /* Color de texto blanco semitransparente */
 }
 
 .footer-links {
   min-width: 120px;
-  /* ancho máximo del texto que aparece */
+  /* Ancho mínimo del contenedor de enlaces */
   text-align: right;
+  /* Alinea el texto a la derecha */
 }
 
 body.menu-open .sticky-footer {
   pointer-events: none;
+  /* Desactiva la interacción con el footer cuando el menú está abierto */
 }
 
 /* =====================================================
@@ -437,17 +489,17 @@ CONTACT TOGGLE
 
 #contact-toggle {
   cursor: pointer;
+  /* Cursor de puntero al pasar sobre el elemento */
 
   text-align: right;
-
+  /* Alinea el texto a la derecha */
 }
 
 #contact-toggle-container {
   width: 190px;
-  /* o el ancho del email */
+  /* Ancho fijo del contenedor (suficiente para el email) */
   position: relative;
-  /* 🔑 ANCLA DEL HINT */
-
+  /* Posicionamiento relativo para anclar el tooltip */
 }
 
 .contact-text {
@@ -470,6 +522,7 @@ CONTACT TOGGLE
   position: absolute;
   /* Posicionamiento absoluto respecto al toggle */
   right: 0;
+  /* Alineado al borde derecho */
   bottom: 100%;
   /* Encima del elemento */
 
@@ -498,7 +551,7 @@ CONTACT TOGGLE
   opacity: 1;
   /* Visible */
   transform: translateX(7px) translateY(-20px);
-  /* Se mueve un poco hacia arriba al aparecer */
+  /* Mantiene la posición (podría ajustarse más arriba si se desea) */
 }
 
 /* =====================================================
@@ -506,6 +559,8 @@ CONTACT TOGGLE
    ===================================================== */
 
 @media (max-width: 975px) {
+  /* Media query para pantallas de 975px o menos */
+
   #nav {
     display: none;
     /* Oculta navegación de escritorio en móviles */
@@ -522,43 +577,52 @@ CONTACT TOGGLE
   }
 
   #header {
-
     left: 12px;
-    /* Separación desde el borde izquierdo */
+    /* Separación desde el borde izquierdo reducida */
     right: 12px;
-    /* Separación desde el borde derecho */
-
+    /* Separación desde el borde derecho reducida */
   }
 
   #copyright {
     display: flex;
+    /* Muestra el símbolo de copyright en móviles */
     margin-right: 4px;
+    /* Espacio a la derecha del símbolo */
   }
 
   #copyright-desktop {
     display: none;
+    /* Oculta el texto de copyright completo en móviles */
   }
 
   .sticky-footer {
     left: 10px;
+    /* Separación desde el borde izquierdo reducida */
     right: 10px;
+    /* Separación desde el borde derecho reducida */
   }
 }
-
-
 
 /* =====================================================
    DESKTOP
    ===================================================== */
+
 @media (min-width: 976px) {
+  /* Media query para pantallas de 976px o más */
+
   .footer-content {
     display: grid;
+    /* Activa CSS Grid */
     grid-template-columns: auto 1fr auto;
+    /* Tres columnas: auto, flexible, auto */
     align-items: center;
+    /* Centra verticalmente los elementos */
   }
 
   #copyright-desktop {
     justify-self: center;
+    /* Se centra en su celda de grid */
     white-space: nowrap;
+    /* Evita que el texto se divida en varias líneas */
   }
 }
