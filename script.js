@@ -92,6 +92,9 @@ if (contactLink && textEl) {
   
   let clipboardIconShown = false;
   // Variable de estado: ¿Ya se mostró el emoji de portapapeles?
+  
+  let emailCopied = false;
+  // Variable de estado: ¿Ya se copió el email al portapapeles?
 
   contactLink.addEventListener("click", (e) => {
     // Agrega un escuchador para el evento 'click'
@@ -134,24 +137,31 @@ if (contactLink && textEl) {
       // Sale de la función aquí para no ejecutar la lógica de copiado en el primer clic
     }
 
-    navigator.clipboard.writeText(email);
-    // Si ya se ve el email, copia el texto al portapapeles
-
-    if (!hintShown) {
-      // Si no se ha mostrado la notificación de copiado anteriormente
+    if (!emailCopied) {
+      // Si el email no se ha copiado aún al portapapeles
       
-      hintShown = true;
-      // Marca que la notificación ya se mostró (para no repetirla constantemente)
+      navigator.clipboard.writeText(email);
+      // Copia el email al portapapeles
       
-      contactLink.classList.add("show-hint");
-      // Agrega clase CSS que muestra el mensaje "Copiado"
+      emailCopied = true;
+      // Marca que el email ya fue copiado (para no copiarlo de nuevo)
 
-      setTimeout(() => {
-        // Configura un temporizador
+      if (!hintShown) {
+        // Si no se ha mostrado la notificación de copiado anteriormente
         
-        contactLink.classList.remove("show-hint");
-        // Oculta el mensaje después de 2.5 segundos
-      }, 2500);
+        hintShown = true;
+        // Marca que la notificación ya se mostró (para no repetirla constantemente)
+        
+        contactLink.classList.add("show-hint");
+        // Agrega clase CSS que muestra el mensaje "Copiado"
+
+        setTimeout(() => {
+          // Configura un temporizador
+          
+          contactLink.classList.remove("show-hint");
+          // Oculta el mensaje después de 2.5 segundos
+        }, 2500);
+      }
     }
 
     textEl.classList.add("is-fading");
