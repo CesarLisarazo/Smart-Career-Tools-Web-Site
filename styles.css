@@ -216,22 +216,22 @@ body.menu-open {
 #hamburger-button .hamburger {
   opacity: 1;
   /* Totalmente visible */
-  transform: translateX(0);
-  /* Posición inicial: centrado */
+  transform: scaleX(1);
+  /* Escala horizontal normal */
 
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* Animación combinada de opacidad y deslizamiento */
+  /* Animación combinada de opacidad y estiramiento */
 }
 
-/* Cuando abre → se desvanece y se desliza hacia la derecha */
+/* Cuando abre → se desvanece y se estira horizontalmente */
 
 #hamburger-button.open .hamburger {
   opacity: 0;
   /* Invisible cuando el menú está abierto */
-  transform: translateX(30px);
-  /* Se desplaza 30px a la derecha (fuera de vista) */
+  transform: scaleX(0);
+  /* Se comprime horizontalmente hasta desaparecer */
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* Animación combinada de opacidad y deslizamiento */
+  /* Animación combinada de opacidad y estiramiento */
 }
 
 
@@ -244,8 +244,8 @@ body.menu-open {
 #hamburger-button .close {
   opacity: 0;
   /* Invisible por defecto */
-  transform: translateX(-30px);
-  /* Posición inicial: desplazado a la izquierda (fuera de vista) */
+  transform: scaleX(0);
+  /* Comprimido horizontalmente (sin ancho) */
 
   justify-content: center;
   /* Centra las barras verticalmente */
@@ -253,7 +253,7 @@ body.menu-open {
   /* Centra las barras horizontalmente */
 
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* Animación combinada de opacidad y deslizamiento */
+  /* Animación combinada de opacidad y estiramiento */
 }
 
 /* Barras cruz */
@@ -277,15 +277,15 @@ body.menu-open {
    STATE — MENU OPEN
    ===================================================== */
 
-/* X aparece y se desliza desde la izquierda */
+/* X aparece y se estira horizontalmente */
 
 #hamburger-button.open .close {
   opacity: 1;
   /* Visible cuando el menú está abierto */
-  transform: translateX(0);
-  /* Posición final: centrado */
+  transform: scaleX(1);
+  /* Se estira hasta su ancho normal */
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* Animación combinada de opacidad y deslizamiento */
+  /* Animación combinada de opacidad y estiramiento */
 }
 
 
