@@ -218,6 +218,7 @@ body.menu-open {
   /* Totalmente visible */
   transform: scaleX(1);
   /* Escala horizontal normal */
+  transform-origin: right;
 
   transition: opacity 0.3s ease, transform 0.3s ease;
   /* Animación combinada de opacidad y estiramiento */
@@ -229,6 +230,7 @@ body.menu-open {
   opacity: 0;
   /* Invisible cuando el menú está abierto */
   transform: scaleX(0);
+  transform-origin: right;
   /* Se comprime horizontalmente hasta desaparecer */
   transition: opacity 0.3s ease, transform 0.3s ease;
   /* Animación combinada de opacidad y estiramiento */
