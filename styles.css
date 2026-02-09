@@ -77,7 +77,7 @@ body.menu-open {
 #header {
   position: fixed;
   /* Fija el header en la parte superior de la ventana */
-  top: 12px;
+  top: 15px;
   /* Separación desde el borde superior */
   left: 13rem;
   /* Separación desde el borde izquierdo */
@@ -86,7 +86,7 @@ body.menu-open {
   height: 64px;
   /* Altura fija del header */
 
-  border-radius: 14px;
+  border-radius: 14px 14px 0 0;
   /* Bordes redondeados */
   background: linear-gradient(to top right, #f9f9fd, #cacbdd);
   /* Fondo con degradado */
@@ -386,6 +386,70 @@ body.menu-open {
   /* Bloquea clicks en el contenido de abajo */
 }
 
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+#hero-container {
+   position: fixed;
+  /* Fija el header en la parte superior de la ventana */
+  top: 76px;
+  /* Separación desde el borde superior */
+  left: 13rem;
+  /* Separación desde el borde izquierdo */
+  right: 13rem;
+  /* Separación desde el borde derecho */
+  height: 304px;
+  /* Altura fija del header */
+
+  border-radius: 0 0 14px 14px;
+  /* Bordes redondeados */
+  background: linear-gradient(to top right, #f9f9fd, #cacbdd);
+  /* Fondo con degradado */
+  box-shadow: rgba(0, 0, 0, 0.08) 0 4px 8px;
+
+
+  background-image: url("./img/background_hero.jpg");
+  /* Imagen de fondo */
+  background-size: cover;
+  /* Escala la imagen para cubrir todo el contenedor */
+  background-position: center;
+  /* Centra la imagen de fondo */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  text-align: center;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+   ===================================================== */
+
+
+#hero-tittle {
+  color: #1f283fe7;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+ text-shadow: 0.5px 0.5px 0.5px  #1f283f1c;
+ font-size: 30px;
+   transform: scaleY(0.95);
+}
+
+#hero-subtittle{
+  position: fixed;
+  color: #1f283f;
+  font-size: small;
+  font-weight: lighter;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   transform: scaleY(0.95);
+  left: 3rem;
+  /* Separación desde el borde izquierdo */
+  right: 3rem;
+ margin-top: -15px;
+  
+}
+
 /* =====================================================
    FOOTER
    ===================================================== */
@@ -579,9 +643,15 @@ CONTACT TOGGLE
   }
 
   #header {
-    left: 12px;
+    left: 15px;
     /* Separación desde el borde izquierdo reducida */
-    right: 12px;
+    right: 15px;
+    /* Separación desde el borde derecho reducida */
+  }
+  #hero-container {
+      left: 15px;
+    /* Separación desde el borde izquierdo reducida */
+    right: 15px;
     /* Separación desde el borde derecho reducida */
   }
 
